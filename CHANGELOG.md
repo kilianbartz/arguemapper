@@ -1,5 +1,110 @@
 # Changelog
 
+## 1.0.0 (2024-10-04)
+
+
+### ⚠ BREAKING CHANGES
+
+* The application has been converted from commonjs to
+esm.
+* The state handling code has been largely rebuilt.
+This will reset the cached state in the browser the first time the new
+version is launched.
+
+### Features
+
+* add ability to generate atoms using openai ([682c4b4](https://github.com/kilianbartz/arguemapper/commit/682c4b4d1d89f03cb24f31a77670baf81315d508))
+* add ai function to identify the major claim ([692a677](https://github.com/kilianbartz/arguemapper/commit/692a67784468c0243a1fe1a44e29418c3447bda9))
+* add error handling to openai ([3977201](https://github.com/kilianbartz/arguemapper/commit/397720165293085b23a24fbd8daafc3b3188fbe4))
+* add explanations & metadata to openai nodes ([a867a0c](https://github.com/kilianbartz/arguemapper/commit/a867a0ce5c250863b9c4f11fe37eae29e5f2372d))
+* add loading component for ai generations ([ababd47](https://github.com/kilianbartz/arguemapper/commit/ababd47c6bef94019d47119a980553b3ed66e2f0))
+* convert to esm ([d51a1a7](https://github.com/kilianbartz/arguemapper/commit/d51a1a7f144404c4fd35587fb77cddce561b97e1))
+* enable hotkeys for undo/redo/save ([396abb9](https://github.com/kilianbartz/arguemapper/commit/396abb96e66896abf59a6868e11f1f13cc462bfa))
+* enable multi-arch docker builds ([d9ea46d](https://github.com/kilianbartz/arguemapper/commit/d9ea46d4ae589fc27855119c0311635b38c13db1))
+* improve assistant configuration ([cf3e0b4](https://github.com/kilianbartz/arguemapper/commit/cf3e0b4d302a7845cfe51f9ba6e2d54c3e3bca00))
+* **openai:** add button to generate complete graph ([729a473](https://github.com/kilianbartz/arguemapper/commit/729a473bdc52bd6b9fce118e6f54aad41dcbffb2))
+* **openai:** add relation prediction ([b83e0b5](https://github.com/kilianbartz/arguemapper/commit/b83e0b550360e2a65b2e4fcc2b04f1e2232ebf57))
+* **openai:** allow generation of complete graphs ([572616c](https://github.com/kilianbartz/arguemapper/commit/572616cb8eddb9018cea8f41715bc6a324672bf8))
+* **openai:** allow prompt customization ([88ffe58](https://github.com/kilianbartz/arguemapper/commit/88ffe58a036f517db5fe9c2d05a1c223072f2e82))
+* show additional resource fields ([918e7cd](https://github.com/kilianbartz/arguemapper/commit/918e7cd33052728c6be7d131507dff7f9dadfa24))
+* show correct version in inspector ([9a03279](https://github.com/kilianbartz/arguemapper/commit/9a032792d08981be89d1169f13ee069a9dc441a4))
+* use arguebuf library instead of custom model ([11647f0](https://github.com/kilianbartz/arguemapper/commit/11647f09c65e596e851c721b9120033e309631aa))
+* use structured outputs instead of function calling ([df38b21](https://github.com/kilianbartz/arguemapper/commit/df38b211f6f096380a1bf175e03fbb192bedcfa5))
+
+
+### Bug Fixes
+
+* add correct references to generated atoms ([f7f82b1](https://github.com/kilianbartz/arguemapper/commit/f7f82b1fea733cde1410010ba39b3aeb12948581))
+* add initial version of arguemapper logo ([4c12ce7](https://github.com/kilianbartz/arguemapper/commit/4c12ce7c400f34c17599812bff7b5845f02d2569))
+* add node/edge id to inspector ([a1dbd85](https://github.com/kilianbartz/arguemapper/commit/a1dbd85a3a044a4bd75b2a6b8d4bd307ce79fdc9))
+* aif export did not start download ([7fd0ef5](https://github.com/kilianbartz/arguemapper/commit/7fd0ef507acc6705a306a6d80bacda78d5fbe791))
+* **assistant:** add seed parameter ([3847bfc](https://github.com/kilianbartz/arguemapper/commit/3847bfc7c2ee4e0c1ffbb8e478b987439f368c33))
+* **assistant:** make model selection consistent ([7d2a508](https://github.com/kilianbartz/arguemapper/commit/7d2a508cf1676efc6ab2cbde17ec7786fa8dbd27))
+* bump version ([dc6575d](https://github.com/kilianbartz/arguemapper/commit/dc6575d707eaa3f51b8b593b37a1b6742eff4ee6))
+* bump version ([8543724](https://github.com/kilianbartz/arguemapper/commit/854372413725ad80b81904e9b6abd13d9611119f))
+* bump version ([b5733b4](https://github.com/kilianbartz/arguemapper/commit/b5733b4c459ecb4465030675d8d581294e7a3ff7))
+* capitalize scheme names ([b36f611](https://github.com/kilianbartz/arguemapper/commit/b36f611a0f48eaca0ab915ec23a79c0ee2389172))
+* clean up graph when applying predictions ([189703e](https://github.com/kilianbartz/arguemapper/commit/189703e704dd510c7a66f58b11349f4c143daa3c))
+* clone elements before modifying them ([66a1828](https://github.com/kilianbartz/arguemapper/commit/66a18285bd1f689565ed2f83544684a8e12adc23))
+* correct docker release condition ([29d1cbb](https://github.com/kilianbartz/arguemapper/commit/29d1cbb404c824b659637682cee6face5110935d))
+* correctly compare past/current state in zundo ([74e31c9](https://github.com/kilianbartz/arguemapper/commit/74e31c94b401c1cd9dbf28218a9e73c215c90602))
+* delete connected edges when deleting nodes ([30da2fd](https://github.com/kilianbartz/arguemapper/commit/30da2fd0c6be08b41707c734fcb72ebf9bceb1fa))
+* delete connected edges when deleting nodes ([f5fe3cb](https://github.com/kilianbartz/arguemapper/commit/f5fe3cb46827dbbfd6ee02098522cf930df9736e))
+* **deps:** bump arguebuf to fix copy bug ([3e3b0a2](https://github.com/kilianbartz/arguemapper/commit/3e3b0a2bb4ae85438e5f23c66611fe1eb3024d3a))
+* **deps:** update dependency arg-services to v1 ([#14](https://github.com/kilianbartz/arguemapper/issues/14)) ([5815244](https://github.com/kilianbartz/arguemapper/commit/5815244726c6358dbdb7c65a6edbfa8308fb0f7e))
+* disallow openai logs in browsers ([d3c9895](https://github.com/kilianbartz/arguemapper/commit/d3c989580e3ae2aefd39b17f086a98e94bf9aac5))
+* filter elements before applying auto-layout ([bb525ce](https://github.com/kilianbartz/arguemapper/commit/bb525ceb60b896856f30db0d4fb9d5dc7a3bc30f))
+* improve layout and fitView ([33933fd](https://github.com/kilianbartz/arguemapper/commit/33933fde8a126f4c408a63c6951f99f7efef2304))
+* improve performance of snackbar ([df05cf4](https://github.com/kilianbartz/arguemapper/commit/df05cf4b4d95c87c91ac85f8fd5c9aa37af7d5de))
+* improve serialization process ([3cf9344](https://github.com/kilianbartz/arguemapper/commit/3cf9344c093e96407331250ca5ab2973e497c1a5))
+* improve session storage usage ([e3e8d58](https://github.com/kilianbartz/arguemapper/commit/e3e8d58fe3ac5a995cd8af07819bd04ab6d83a7f))
+* improve state handling ([ae8a6f7](https://github.com/kilianbartz/arguemapper/commit/ae8a6f7d88c093c1b0821304309822c930f79a2c))
+* make sidebars bigger, adjust mobile breakpoint ([ff90097](https://github.com/kilianbartz/arguemapper/commit/ff900970a872c096db03494be155fdc1552b58d7))
+* migrate custom equality function ([d465f9e](https://github.com/kilianbartz/arguemapper/commit/d465f9e4d2a5f8d2fbfb2e246f8935dd3b4dd89e))
+* migrate inspector fields to arguebuf library ([83db122](https://github.com/kilianbartz/arguemapper/commit/83db122bdc73ac0f4111d671fb4a9231a2ce24c2))
+* **openai:** correctly specify required fields ([6ff2e26](https://github.com/kilianbartz/arguemapper/commit/6ff2e264614a9cd09e0f1f108fb70fa4ed883665))
+* **openai:** improve adu, mc steps ([9b6283c](https://github.com/kilianbartz/arguemapper/commit/9b6283c1a13c5ece74ca9658f163c18dc2f2cef8))
+* **openai:** major claim of complete graphs ([e7787e4](https://github.com/kilianbartz/arguemapper/commit/e7787e4847cc12a5a0785ad4cbae196f9f68527c))
+* **openai:** make prompt field multiline ([fc747a1](https://github.com/kilianbartz/arguemapper/commit/fc747a18d3ebd15d61eca6d2967a7e2a0c1a63a5))
+* **openai:** pass additional resource information to model ([21a92f8](https://github.com/kilianbartz/arguemapper/commit/21a92f870bf5d4842da653a89b8d1b3af45e7826))
+* **openai:** remove edges when generating nodes ([4c16839](https://github.com/kilianbartz/arguemapper/commit/4c16839de3e0b23702752c7031c617ec52a7ddf3))
+* **openai:** update custom prompt description ([b93fe2f](https://github.com/kilianbartz/arguemapper/commit/b93fe2f271a69784d763ba8fb9b2263d3e8ffb75))
+* **openai:** update prompts ([45df3ea](https://github.com/kilianbartz/arguemapper/commit/45df3eacdc671dbe0e26f7fcbe901bf00ebb874e))
+* **openai:** update relation prompts ([1a617b1](https://github.com/kilianbartz/arguemapper/commit/1a617b1362a1363e8766b6a6f83225e3a045a202))
+* **openai:** update relation prompts ([381479a](https://github.com/kilianbartz/arguemapper/commit/381479acfa99903b2ce9e16721364f15012bacc8))
+* optimize openai model selection ([02a2589](https://github.com/kilianbartz/arguemapper/commit/02a2589a897c1230ca85f245cecb4ec238fb779b))
+* optimize temporal store usage ([013e31a](https://github.com/kilianbartz/arguemapper/commit/013e31afcb9f06b23f390f3ea0663ddc6be5f908))
+* properly export userdata for nodes ([19fa6a4](https://github.com/kilianbartz/arguemapper/commit/19fa6a4eb5e5640228def05057c378c4fa4129db))
+* properly serialize analyst ([5c3e43f](https://github.com/kilianbartz/arguemapper/commit/5c3e43f8225e04073adf3aa0f4e46547d4df7cd3))
+* properly set graph data ([1b88bb8](https://github.com/kilianbartz/arguemapper/commit/1b88bb8fc1bf2ed1a1acb78b25a38a94411041ac))
+* properly use autocomplete values ([06136fc](https://github.com/kilianbartz/arguemapper/commit/06136fcfaaa107eb16dde77c42fd0b4538a89dc6))
+* re-add `dangerouslyAllowBrowser` to openai ([9efac6e](https://github.com/kilianbartz/arguemapper/commit/9efac6eee86d88049d655cf91a4c5633f87d703f))
+* re-enable analyst verification ([773a283](https://github.com/kilianbartz/arguemapper/commit/773a283d412271c07d0c627ec07324086ccd415f))
+* re-enable setting argument schemes ([1c4e71b](https://github.com/kilianbartz/arguemapper/commit/1c4e71bcc577ba99b75f248b56384ef7026a4a15))
+* remove analyst before adding during export ([c554fd7](https://github.com/kilianbartz/arguemapper/commit/c554fd729a2ffb4d1fe3d4e0888ed1ba4ad295b1))
+* remove unneeded loader component ([1ce7cac](https://github.com/kilianbartz/arguemapper/commit/1ce7cac88c30379d5563a68bc82b03b7631e56ed))
+* rename openai to assistant, update models ([32a1143](https://github.com/kilianbartz/arguemapper/commit/32a11433b95c5f20c9906cc4525abdb1e799888f))
+* resolve errors when adding edges ([7bcad32](https://github.com/kilianbartz/arguemapper/commit/7bcad325022bd200c390d3ffea59bf0ba361db31))
+* show version in inspector ([4a93933](https://github.com/kilianbartz/arguemapper/commit/4a939330619199c8e0109b4e5f6c39d3dbeb89ab))
+* temporarily disable analyst verification ([0cf2425](https://github.com/kilianbartz/arguemapper/commit/0cf2425c46549f4fe690261af1a059f2bb18a1b7))
+* **toolbar:** typo in zoom button ([#59](https://github.com/kilianbartz/arguemapper/issues/59)) ([9acc419](https://github.com/kilianbartz/arguemapper/commit/9acc4197e56d2f4a4cc01a163dbef4679fea6faa))
+* update dependenices ([5d6ab3a](https://github.com/kilianbartz/arguemapper/commit/5d6ab3a44108e4ac3df736705051151486ba1c71))
+* update deps ([4eed2ab](https://github.com/kilianbartz/arguemapper/commit/4eed2ab541f2ad51412cb2c50b8b3b64d8052750))
+* update grpc template ([a4d760b](https://github.com/kilianbartz/arguemapper/commit/a4d760bd5eed102892d53f62918eedc1757451ae))
+* update python input ([fd2796f](https://github.com/kilianbartz/arguemapper/commit/fd2796fb69e3ed29cd027a776aae2660eec3810b))
+* update store version to invalidate caches ([78fd010](https://github.com/kilianbartz/arguemapper/commit/78fd010df82c0685891e8af462a6bed09ee51466))
+* use correct date formatting ([41c215c](https://github.com/kilianbartz/arguemapper/commit/41c215c715e15cd9308f694f2630c739b539fe46))
+* use layered layout by default ([c626862](https://github.com/kilianbartz/arguemapper/commit/c6268629f1f3c67104f2ed8e6a4b9581ceef9017))
+* use password field for openai api key ([ff71e92](https://github.com/kilianbartz/arguemapper/commit/ff71e927f5b68160c20c828b3cad76aaea0cea39))
+* use temporal store via hook ([55916ef](https://github.com/kilianbartz/arguemapper/commit/55916ef3788f23d4049543f10e1e60a251c50c83))
+* zundo type error ([93fcf6a](https://github.com/kilianbartz/arguemapper/commit/93fcf6aeca9c8bffb7f9c9ec77a86815e3d9f723))
+
+
+### Miscellaneous Chores
+
+* add changes ([13ea36c](https://github.com/kilianbartz/arguemapper/commit/13ea36ccc38597bd8c7042771fe71bd2f21d3260))
+* add changes ([c683350](https://github.com/kilianbartz/arguemapper/commit/c6833508e086632271e2e14ffc7480c06d762d61))
+
 ## [2.2.4](https://github.com/recap-utr/arguemapper/compare/v2.2.3...v2.2.4) (2024-09-19)
 
 
